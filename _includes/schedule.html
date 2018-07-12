@@ -1,0 +1,57 @@
+{% assign schedule = site.data.schedule %}
+
+
+<table class="schedule" style="border: 1px">
+    <thead>
+        <tr>
+            <th>Meeting</th>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Assignment</th>
+        </tr>
+    </thead>
+    {% for week in schedule.weeks %}
+        <tr class="week">
+            <td class="number">{{ week.number }}</td>
+            {% assign class = week.class[0] %}
+            {% assign assignment = week.assignment[0] %}
+            <td class="date">
+                <p class="day">{{ class.date | date: "%b. %e, %Y" }}</p>
+                <p class="time">{{ class.date | date: "%H:%M %Z" }}</p>
+            </td>
+            <td class="title">
+                {{ class.title }}
+                {% if class.materials %}
+                    <ul class="materials">
+                    {% for material in class.materials %}
+                        <li>
+                            <a href="{{material.link}}">{{material.title}}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </td>
+            <td class="assignment">
+                <p class="title">
+                    {% if assignment.url %}
+                        <a href="{{ assignment.url }}">
+                    {% endif %}
+                    {{  assignment.title }}
+                    {% if assignment.url %}
+                        </a>
+                    {% endif %}
+                </p>
+                {% if assignment.submission %}
+                    <p class="due-date">
+                        <b>Submission:</b> {{ assignment.submission | date: "%b. %e, %Y @ %H:%M %Z" }}
+                    </p>
+                {% endif %}                    
+                {% if assignment.critique %}
+                    <p class="critique-date">
+                        <b>Critique:</b> {{ assignment.critique | date: "%b. %e, %Y @ %H:%M %Z" }}
+                    </p>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
