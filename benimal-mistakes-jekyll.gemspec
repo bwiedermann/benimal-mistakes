@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name                    = "benimal-mistakes-jekyll"
-  spec.version                 = "0.0.2"
+  spec.version                 = "0.1.0"
   spec.authors                 = ["Ben Wiedermann"]
 
   spec.summary                 = %q{A flexible two-column Jekyll theme based on minimal mistakes by Michael Rose.}

@@ -1,0 +1,139 @@
+
+/******************************************************************************
+* Table of contents
+******************************************************************************/
+.toc {
+    .nav__title {
+        background-color: $info-color;
+    }
+}
+
+/******************************************************************************
+* Font awesome icons
+******************************************************************************/
+
+@mixin colorful-icons {
+    .fa-info-circle {
+        color: $info-color;
+    }
+
+    .fa-bookmark {
+        color: $danger-color;
+    }
+
+    .fa-github {
+        color: $github-color;
+    }
+
+    .fa-graduation-cap {
+        color: $schoology-color;
+    }
+}
+
+/******************************************************************************
+* Schedule table
+******************************************************************************/
+
+table.schedule {
+    width: 80%;
+    margin: auto;
+    border: none;
+
+    thead {
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+        background-color: transparent;
+    }
+
+    tbody {
+        border-bottom: 2px solid black;
+    }
+
+    td {
+        vertical-align: middle;
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    td.number {
+        text-align: center;
+        width: 10%;
+    }
+
+    td.date {
+        width: 20%;
+
+        p.time {
+            font-size: small;
+        }
+    }
+
+    td.title {
+        width: 35%;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            font-size: small;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-style: italic;
+
+            li {
+                display: inline;
+                margin-right: .5em;
+            }
+            
+            li:after {
+                content: "·";
+            }
+
+            li:last-child:after {
+                content: "";
+            }
+        }
+    }
+
+    td.assignment {
+        width: 35%;
+        p.due-date, p.critique-date {
+            font-size: small;
+            font-style: italic;
+        }
+    }
+}
+
+/******************************************************************************
+* Masthead
+******************************************************************************/
+
+#site-nav {
+    @include colorful-icons();
+}
+
+.masthead {
+    ul {
+        font-size: smaller;        
+    }
+}
+
+/******************************************************************************
+* Footer
+******************************************************************************/
+
+.page__footer {
+    display: none;
+}
+
+/* right-hand nav */
+
+// make it sticky
+// aside.sidebar__right {
+//     position: sticky;
+//     float: right;
+//     top: 44px;
+// }

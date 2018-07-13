@@ -5,6 +5,7 @@
 */
 
 /* Variables */
+@import "my-variables";
 @import "minimal-mistakes/variables";
 
 /* Mixins and functions */
@@ -38,3 +39,5 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+@import "my-styles";
