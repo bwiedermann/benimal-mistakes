@@ -19,7 +19,7 @@
 @import "minimal-mistakes/reset";
 @import "minimal-mistakes/base";
 @import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
+//@import "minimal-mistakes/tables";
 @import "minimal-mistakes/animations";
 
 /* Components */
@@ -39,5 +39,8 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+/* Course styles */
+@import "course/tables";
 
 @import "my-styles";
