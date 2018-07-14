@@ -3,6 +3,15 @@
 $link-color-visited: $link-color;
 $footer-background-color: $info-color;
 
-$schoology-color: #224E77;
+$global-font-family: $sans-serif !default;
 
-$highlight-color: #007799;
+$page-background: #FFFADD;
+$link-color: #D91B24;
+$link-hover-color: #F08A75;
+$plainlink-color: black;
+$highlight-color: #56A0A6;
+$title-color: $highlight-color;
+$title-background: rgba($page-background, .05); //rgba(250, 245, 228, 0.38);
+$standout-background: white;
+$standout-border: 1px solid #cccccc;
+$shadow-color: #E5EEFA;
