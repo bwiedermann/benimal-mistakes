@@ -27,7 +27,7 @@ table.schedule {
       
       &.date {
         color: white;
-        background-color: black;//$highlight-color;
+        background-color: $highlight-color;
         width: 6%;
         padding: 0px 5px;
         text-align: center;
