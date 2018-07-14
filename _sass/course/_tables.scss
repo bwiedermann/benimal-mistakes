@@ -1,0 +1,78 @@
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table.schedule {
+  margin: auto;
+  border-spacing: 0px 5px;
+  border-collapse: separate;
+
+  thead {
+    font-weight: bold;
+    td {
+      &.date {
+        text-align: center;
+      }
+    }
+  }
+  
+  tr.week {
+    td {
+      padding: 10px 15px;
+      
+      &.week-num {
+        text-align: center;
+        width: 4%;
+      }
+      
+      &.date {
+        color: white;
+        background-color: $highlight-color;
+        width: 6%;
+        padding: 0px 5px;
+        text-align: center;
+        font-size: small;
+        @include inline-dl;
+      }
+      
+      &.day1 {
+        border: 1px solid transparentize($highlight-color, .9);
+        border-left: none;
+      }
+      
+      &.day2 {
+        border: 1px solid transparentize($highlight-color, .9);
+        border-right: none;
+        text-align: right;
+      }
+      
+      &.details {
+        width: 30%;
+        @include line-lists;
+        ul {
+          font-size: small;
+          margin: 0;
+          font-style: italic;
+        }
+      }
+      
+      &.allWeek {
+        border: 1px solid transparentize($highlight-color, .9);
+        text-align: center;
+      }
+      
+      &.assignment {
+        padding-left: 1%;
+        width: 25%;
+        @include clean-lists;
+        dl {
+          dd {
+            font-size: small;
+          } //border-left: 5px solid $highlight-color;
+          border-left: 2px solid transparentize($highlight-color, .2);
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
