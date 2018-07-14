@@ -1,8 +1,14 @@
-<div class="masthead">
+<div class="course masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <h2>{{ site.data.course.semester }} {{ site.data.course.year }}</h2>
+        <h1>
+          <a class="site-title" href="{{ '/' | relative_url }}">{{ site.data.course.title }}</a>
+        </h1>
+        <p>
+          {{ site.data.course.days }} {{ site.data.course.startTime}}&ndash;{{ site.data.course.endTime }} in {{ site.data.course.location }}
+        </p>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
