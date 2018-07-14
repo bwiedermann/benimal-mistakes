@@ -13,11 +13,11 @@
     </thead>
     {% for week in schedule.weeks %}
         <tr class="week">
-            <td class="number">{{ week.number }}</td>
+            <td class="week-num">{{ week.number }}</td>
 
             {% assign class = week.class[0] %}
             <td class="date">
-                <p class="day">{{ class.date }}</p>
+                <p class="day1">{{ class.date }}</p>
             </td>
             <td class="title">
                 {{ class.title }}
@@ -36,7 +36,7 @@
             <td class="title">
                 {{ class.title }} 
                 {% if class.materials %}
-                    <ul class="materials">
+                    <ul class="details">
                         {% for material in class.materials %}
                             <li>
                                 <a href="{{material.link}}">{{material.title}}</a>
@@ -46,7 +46,7 @@
                 {% endif %}
             </td>
             <td class="date">
-                <p class="day">{{ class.date " }}</p>
+                <p class="day2">{{ class.date " }}</p>
             </td>
 
             <td class="assignment">
